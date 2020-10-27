@@ -20,7 +20,7 @@ from htmlcss import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('about', views.about, name='about'),
+    path('about/', views.about, name='about'),
     path('cont', views.cont, name='cont'),
     path('custHome', views.custHome, name='custHome'),
     path('custReg', views.custReg, name='custReg'),
@@ -38,4 +38,5 @@ urlpatterns = [
     path('new/', views.actionRH, name='actionRH'),
     path('restSamp', views.restSamp, name='restSamp'),
     path('new1/', views.actionRI, name='actionRI'),
+    path('custPassReq/', views.custPassReq, name='custPassReq'),
 ]
