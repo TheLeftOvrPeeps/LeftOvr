@@ -35,4 +35,11 @@ class slots(models.Model):
     def __str__(self):
         return self.meal
 
+class contactUs(models.Model):
+    nameC = models.CharField(max_length=1000)
+    emailC = models.CharField(max_length=1000)
+    phoneC = models.CharField(max_length=11)
+    messageC = models.CharField(max_length=4000)
 
+    def __str__(self):
+        return self.nameC + '  ' + self.emailC + '  ' + self.phoneC + '  ' + self.messageC

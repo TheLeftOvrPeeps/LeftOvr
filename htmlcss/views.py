@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Customer
+from .models import Customer, contactUs
 from .models import Restaurant
 from .models import Meals
 from django.contrib.auth import authenticate, login
@@ -103,5 +103,15 @@ def actionRI(request):
 
     return render(request, "Restaurantsamplepage.html")
 
+def contactOpt(request):
+    n = request.POST.get("name")
+    e = request.POST.get("email")
+    p = request.POST.get("phone")
+    m = request.POST.get("message")
+
+    u = contactUs(nameC=n, emailC=e, phoneC=p, messageC=m)
+    u.save()
+
+    return render(request, "SendMessage.html")
 
 
